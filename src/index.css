@@ -11,6 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  min-height: 100vh;
 }
 
 a {
@@ -24,10 +26,13 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /*display: flex;
+  place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
+
+  height: 100%;
+  padding: 0;
 }
 
 h1 {
@@ -66,3 +71,31 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.bg-home {
+    background-image: url('./assets/image/img_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-gradient {
+    background: linear-gradient(45deg, #FF512F, #F09819);
+    min-height: 100vh;
+}
+
+.bg-home::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(transparent 50%, rgb(0, 0, 0));
+}
+
+.bg-gradient::after{
+    background: linear-gradient(-45deg, #FF512F, #F09819);
+}
+
